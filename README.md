@@ -28,7 +28,7 @@
 | category_id        | integer    | null: false                    |
 | situation_id       | integer    | null: false                    |
 | delivery_charge_id | integer    | null: false                    |
-| address_id         | string     | null: false                    |
+| address_id         | integer    | null: false                    |
 | period_id          | integer    | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
@@ -47,8 +47,8 @@
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
 | post_code       | string     | null: false                    |
-| address_id      | string     | null: false                    |
-| address_number  | integer    | null: false                    |
+| address_id      | integer    | null: false                    |
+| address_number  | string     | null: false                    |
 | municipality    | string     | null: false                    |
 | building        | string     |                                |
 | tel             | string     | null: false                    |
