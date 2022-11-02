@@ -3,7 +3,7 @@
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
 | nickname              | string     | null: false                    |
-| email                 | string     | null: false                    |
+| email                 | string     | null: false, unique: true      |
 | encrypted_password    | string     | null: false                    |
 | family_name           | string     | null: false                    |
 | first_name            | string     | null: false                    |
@@ -37,7 +37,7 @@
 
 ### Association
 
-- belongs_to :users
+- belongs_to :user
 - has_one :consumer
 
 
@@ -47,7 +47,7 @@
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
 | post_code       | string     | null: false                    |
-| address_id      | integer    | null: false                    |
+| address_id      | string     | null: false                    |
 | address_number  | integer    | null: false                    |
 | municipalities  | string     | null: false                    |
 | building        | string     |                                |
