@@ -15,5 +15,10 @@ class User < ApplicationRecord
 
   has_many :items
   has_many :consumers
+
+  validates :family_name,            presence: true, format: {with: /\A[ぁ-んァ-ン一-龥]/ }
+  validates :family_name_kana,       presence: true, format: {with: /\A[ァ-ヶー－]+\z/ }
+  validates :first_name,             presence: true, format: {with: /\A[ぁ-んァ-ン一-龥]/ }
+  validates :first_name_kana,        presence: true, format: {with: /\A[ァ-ヶー－]+\z/ }
   
 end
