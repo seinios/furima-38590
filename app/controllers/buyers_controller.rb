@@ -13,7 +13,6 @@ class  BuyersController < ApplicationController
     @consumer_buyer = ConsumerBuyer.new(consumer_params)
     if @consumer_buyer.valid?
       @consumer_buyer.save
-      binding.pry
       redirect_to root_path
     else
       render :index

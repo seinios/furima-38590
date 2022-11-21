@@ -1,3 +1,5 @@
 class Buyer < ApplicationRecord
-  belongs_to :consumer
+  belongs_to :user
+  belongs_to :item
+  has_one :consumer
 end
