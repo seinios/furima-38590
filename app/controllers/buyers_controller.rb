@@ -38,5 +38,4 @@ class  BuyersController < ApplicationController
         currency: 'jpy'
       )
   end
-
 end
