@@ -15,7 +15,7 @@
 ### Association
 
 - has_many :items
-- has_many :consumers
+- has_many :buyers
 
 
 
@@ -38,11 +38,12 @@
 ### Association
 
 - belongs_to :user
-- has_one :consumer
+- has_one :buyer
 
 
 
-## buyers テーブル
+## consumers テーブル
+<!-- 購入者 -->
 
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
@@ -52,15 +53,16 @@
 | municipality    | string     | null: false                    |
 | building        | string     |                                |
 | tel             | string     | null: false                    |
-| consumer        | references | null: false, foreign_key: true |
+| buyer           | references | null: false, foreign_key: true |
 
 
 
 ### Association
 
-- belongs_to :consumer
+- belongs_to :buyer
 
-## consumers テーブル
+## buyersテーブル
+<!-- 購入履歴 -->
 
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
@@ -72,4 +74,4 @@
 
 - belongs_to :user
 - belongs_to :item
-- has_one :buyer
+- has_one :consumer

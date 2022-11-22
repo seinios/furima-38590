@@ -12,7 +12,7 @@ class User < ApplicationRecord
   validates :birth, presence: true
 
   has_many :items
-  # has_many :consumers
+  has_many :buyers
 
   with_options presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: '全角文字を使用してください' } do
     validates :family_name
