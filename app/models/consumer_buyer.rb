@@ -4,13 +4,12 @@ class ConsumerBuyer
 
   with_options presence: true do
     validates :post_code, format:  { with: /\A\d{3}-\d{4}\z/ }
-    validates :municipality,:address_number,:tel
-    validates :tel, numericality: { only_integer: true, message: 'is invalid.Input only number' }
-    validates :tel, length: { maximum: 11, message: "is too long" }
-    validates :tel, length: { minimum: 10, message: "is too short" }
+    validates :municipality,:address_number
+    validates :tel, format: { with: /\A\d{10,11}\z/,allow_blank: true }
     validates :token
     validates :user_id,:item_id
   end
+
 
   validates :address_id, numericality: { other_than: 1 , message: "can't be blank"}
 
