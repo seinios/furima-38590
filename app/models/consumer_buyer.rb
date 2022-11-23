@@ -11,7 +11,7 @@ class ConsumerBuyer
   end
 
 
-  validates :address_id, numericality: { other_than: 1 , message: "can't be blank"}
+  validates :address_id, numericality: { other_than: 1 , message: "を入力してください"}
 
 
   def save
